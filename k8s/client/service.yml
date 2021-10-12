@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: vue
   labels:
-    service: vue
-  name: vue
+    name: vue
 spec:
   selector:
     app: vue
   ports:
-  - port: 8080
-    targetPort: 8080
+    - port: 8080
+      targetPort: 8080
+
