@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+#if we want to specify namespace
+#namespace: prod
+
+bases:
+  - ../../base/
+
+#new resources to add to resources in base
+resources:
+#  - pvc.yml
+#  - pv.yml
+  - secret.yml
+  - ingress.yml
+
+#resources that exists but we want to override it
+patchesStrategicMerge:
+- env.yml
+
+#add label to all resources
+commonLabels:
+  stage: developement
+
+
+images:
+  - name: postgres
+    newTag: '13-alpine'
