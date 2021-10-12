@@ -124,7 +124,7 @@ Add entry to */etc/hosts* file:
 Try it out:
 
 1. [http://hello.world](http://hello.world)
-1. [http://api.hello.world/books](http://pi.hello.world/books)
+1. [http://api.hello.world/books](http://api.hello.world/books)
 
 
 #### Vue
