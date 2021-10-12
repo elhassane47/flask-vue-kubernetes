@@ -4,28 +4,15 @@
 
 Check out the [post](https://testdriven.io/running-flask-on-kubernetes).
 
-## Want to use this project?
 
-### Docker
+### Kustomize
 
-Build the images and spin up the containers:
-
-```sh
-$ docker-compose up -d --build
-```
-
-Run the migrations and seed the database:
+Run using [kustomize](https://kustomize.io/):
 
 ```sh
-$ docker-compose exec server python manage.py recreate_db
-$ docker-compose exec server python manage.py seed_db
+$ kubectl apply -k k8s/overlays/<environement
 ```
 
-Test it out at:
-
-1. [http://localhost:8080/](http://localhost:8080/)
-1. [http://localhost:5001/books/ping](http://localhost:5001/books/ping)
-1. [http://localhost:5001/books](http://localhost:5001/books)
 
 ### Kubernetes
 
@@ -135,8 +122,8 @@ Add entry to */etc/hosts* file:
 
 Try it out:
 
-1. [http://hello.world/books/ping](http://hello.world/books/ping)
-1. [http://hello.world/books](http://hello.world/books)
+1. [http://hello.world](http://hello.world)
+1. [http://api.hello.world/books](http://pi.hello.world/books)
 
 
 #### Vue
