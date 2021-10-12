@@ -9,8 +9,9 @@ Check out the [post](https://testdriven.io/running-flask-on-kubernetes).
 
 Run using [kustomize](https://kustomize.io/):
 
+
 ```sh
-$ kubectl apply -k k8s/overlays/<environement
+$ kubectl apply -k k8s/overlays/<environement>
 ```
 
 
